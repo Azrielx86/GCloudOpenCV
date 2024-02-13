@@ -8,11 +8,11 @@ RUN pip install flask opencv-python-headless Pillow
 COPY server.py /app/server.py
 
 # Establecer variables de entorno necesarias para Flask
-ENV FLASK_APP=/app/server.py
-ENV FLASK_RUN_HOST=0.0.0.0
+# ENV FLASK_APP=/app/server.py
+# ENV FLASK_RUN_HOST=0.0.0.0
 
 # Exponer el puerto 5000
 EXPOSE 5000
 
 # Ejecutar el servidor Flask
-CMD ["flask", "run"]
+CMD ["python", "/app/server.py"]
